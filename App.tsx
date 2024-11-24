@@ -5,12 +5,13 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
+import Geolocation from 'react-native-geolocation-service';
+import { locationHook } from './src/locationHook.ts';
 
-
-function App(): React.JSX.Element {
+function App() {
+  locationHook();
 
   return (
     <SafeAreaView style={styles.sectionContainer}>
