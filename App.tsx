@@ -11,13 +11,16 @@ import Geolocation from 'react-native-geolocation-service';
 import { locationHook } from './src/locationHook.ts';
 
 function App() {
-  locationHook();
+  const {latitude, longitude} = locationHook();
 
   return (
     <SafeAreaView style={styles.sectionContainer}>
       <View>
         <Text>
-          Hello World!
+          La latitud es: {latitude}
+        </Text>
+        <Text>
+          La longitud es: {longitude}
         </Text>
       </View>
     </SafeAreaView>
