@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Platform, PermissionsAndroid } from "react-native";
 import Geolocation from 'react-native-geolocation-service';
 
-interface Coordinates {
+export interface Coordinates {
     latitude: number,
     longitude: number,
 }
