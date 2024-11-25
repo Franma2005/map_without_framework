@@ -11,7 +11,6 @@ import MapView, { Marker, UrlTile } from 'react-native-maps';
 function App() {
   const { latitude, longitude } = locationHook();
 
-
   return (
     <SafeAreaView style={styles.sectionContainer}>
       <View style={{ flex: 1 }}>

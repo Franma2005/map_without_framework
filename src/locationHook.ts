@@ -55,13 +55,14 @@ export const locationHook = ():Coordinates => {
 
     //* Este useEffect se va a ejecutar siempre cuandoo se abra el dispositivo y me va a detectar la plataforma. Uso un useEffect para mega asegurarme
     //* de que se va a ejecutar
-    useEffect(() => { askPermision() }, []);
-
-    //* Este useEffect se va a ejecutar una unica vez al iniciar el programa. El watchLocation() es una funcion que contiene un evento de observación
     useEffect(() => {
+        askPermision();
         const watchId = watchLocation();
         return () => Geolocation.clearWatch(watchId);
-     }, []);
+    }, []);
+
+    //* Este useEffect se va a ejecutar una unica vez al iniciar el programa. El watchLocation() es una funcion que contiene un evento de observación
+    
 
      //* Devolvemos location
      return (location);
